@@ -1,0 +1,22 @@
+/*Contenedor Principal*/
+#contenedor {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 7.1fr;
+}
+
+/*Dispocicion de elementos en el Contenedor*/
+#menu-lateral {
+  grid-column: 1/2;
+  grid-row: 1/-1;
+}
+
+#cabecera-buscar {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+#seccion-principal {
+  grid-column: 2/3;
+  grid-row: 2/-1;
+}/*# sourceMappingURL=App.css.map */

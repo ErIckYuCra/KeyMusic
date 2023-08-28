@@ -1,0 +1,70 @@
+@import '../../assets/data/colors.scss';
+
+/*Contenedor Nav*/
+nav{
+
+    background-color: $color-contenedor;
+    font-size: 1em;
+
+}
+
+
+/*Imagen Logo*/
+
+#contenedor-imagen-logo{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+#contenedor-imagen-logo img{
+    width: 100%;
+    height: auto;
+    
+}
+
+#imagen-logo{
+    min-width: 6.25rem;
+    max-width: 8.25rem;
+   
+}
+
+/*---*/
+
+.li-navbar{
+    padding: 0.6em;
+    text-align: start;
+
+}
+
+.contenedor-img-navbar{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contenedor-img-navbar h3{
+    width: 90%;
+}
+
+.contenedor-icono-navbar{
+    width: 10%;
+    min-width: 1.9em;
+    
+}
+
+
+
+.img-navbar{
+    
+    width: 100%;
+    height: auto;
+}
+
+#ul-navbar{
+    padding: 0;
+    margin-left: 16px;
+    list-style-type: none;
+    font-size: 0.9em;
+    
+}

@@ -1,0 +1,46 @@
+@import './assets/data/colors.scss';
+
+/*Importar fuente*/
+@font-face {
+
+    font-family: 'Alata';
+    src: url('./assets/fonts/alata.ttf') format('truetype');
+}
+
+/*Configuracion Comun*/
+body{
+    background-color: $color-fondo;
+    color: $color-titulo;
+    font-family: 'Alata';
+    margin: 0;   
+}
+
+
+ul{
+    margin: 0;
+    list-style-type: none;
+   
+}
+
+a{
+    text-decoration: none;
+    color: $color-titulo;
+}
+
+button{
+    font-family:'Alata';
+    background: none;
+    color: $color-titulo;
+    border: none;
+}
+
+input{
+    background-color: $color-contenedor;
+    border-radius: 5px;
+    border-color: $color-titulo;
+    font-family: 'Alata';
+    color: $color-titulo;
+    padding: 0.3rem;
+    width: 25rem;
+    
+}

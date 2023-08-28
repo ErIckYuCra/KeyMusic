@@ -1,0 +1,50 @@
+
+@import '../../assets/data/colors.scss';
+
+
+/*Contenedor-Cabecera*/
+#cabecera-buscar{
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 1rem;
+    font-size: 0.9em;
+}
+
+/*Botones*/
+button{
+    font-family:'Alata';
+    background: none;
+    color: $color-titulo;
+    border: none;
+    font-size: 1em;
+}
+
+
+/*Estilo li - ul*/
+
+#lista-buscar{
+    display: flex;
+    justify-content: end;
+    padding: 1.5em;
+}
+
+#lista-buscar li{
+    margin-left: 1.5rem;
+}
+
+
+/*Estilo Input*/
+
+input{
+    background-color: $color-contenedor;
+    border-radius: 5px;
+    border-color: $color-titulo;
+    font-family: 'Alata';
+    color: $color-titulo;
+    padding: 0.3em;
+    font-size: 1em;
+    width: 25em;
+    
+}

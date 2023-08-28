@@ -1,0 +1,39 @@
+/*Importar fuente*/
+@font-face {
+  font-family: "Alata";
+  src: url("./assets/fonts/alata.ttf") format("truetype");
+}
+/*Configuracion Comun*/
+body {
+  background-color: #0F0F11;
+  color: #FFFFFF;
+  font-family: "Alata";
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+button {
+  font-family: "Alata";
+  background: none;
+  color: #FFFFFF;
+  border: none;
+}
+
+input {
+  background-color: #18181D;
+  border-radius: 5px;
+  border-color: #FFFFFF;
+  font-family: "Alata";
+  color: #FFFFFF;
+  padding: 0.3rem;
+  width: 25rem;
+}/*# sourceMappingURL=index.css.map */
