@@ -3,10 +3,10 @@ import { useEffect, useState } from "react"
 import './ContentExplore.css'
 import { getSongList } from "../../../utils/getDataApi/dataGetSongsList"
 import { useToken } from "../../../hook/useToken"
-import { getNewReleasepAlbum,getAlbum } from "../../../utils/getDataApi/dataGetDataAlbum"
-import { getSong } from "../../../utils/getDataApi/dataGetDataSongs"
-import { getArtist, getRelatedArtist } from "../../../utils/getDataApi/dataGetDataArtist"
-
+import { getNewReleasepAlbum,getAlbum, getAlbumSongs } from "../../../utils/getDataApi/dataGetDataAlbum"
+import AlbumData from "../../components-data/album-data/AlbumData"
+import MusicData from "../../components-data/music-data/MusicData"
+import ArtistData from "../../components-data/artist-data/ArtistData"
 
 
 
@@ -23,12 +23,8 @@ function ContentExplore(){
     async function data(){
         const data_song = await  getSongList("37i9dQZEVXbNG2KDcFcKOF",token)
         const data_album = await getNewReleasepAlbum(token)
-        const data_getSong = await getSong("7x9aauaA9cu6tyfpHnqDLo",token)
-        const data_artist = await getArtist("3vKxuOGRkXJWpCZPf01Nj8",token)
-        const related_artist = await getRelatedArtist("3vKxuOGRkXJWpCZPf01Nj8",token)
-        console.log(related_artist)
-        console.log(data_album.albums.items)
 
+        
         setSongList(data_song) 
         setNewReleaseAlbum(data_album) 
         
@@ -42,6 +38,10 @@ function ContentExplore(){
 
  
     return <section id="contenido-explore">
+
+        <AlbumData album_data={newReleaseAlbum}></AlbumData>
+        <MusicData music_data={songList}></MusicData>
+        <ArtistData></ArtistData>
 
     </section>
 }

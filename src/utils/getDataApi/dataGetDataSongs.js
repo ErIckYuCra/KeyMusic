@@ -1,11 +1,17 @@
 
 import axios from 'axios'
+import { transferSongs } from './dataTransfer/transferSong'
 
 
 export async function getSong(id_song="",data_token=""){
     const song = await axios.get('https://api.spotify.com/v1/tracks/'+id_song,data_token)
-    return await song.data
+    return transferSongs(song.data)
 }
+
+
+
+
+
 
 export async function getAudioFeatures(id_song="",data_token=""){
     const audio_features = await axios.get('https://api.spotify.com/v1/audio-features/'+id_song,data_token)
@@ -16,6 +22,11 @@ export async function getAudioAnalysis(id_song="",data_token=""){
     const audio_analysis = await axios.get('https://api.spotify.com/v1/audio-analysis/'+id_song,data_token)
     return await audio_analysis.data
 }
+
+
+
+
+
 
 export async function getRecommendations(id_song ='',id_artist='',genres_string='',data_token=""){
 
@@ -34,13 +45,13 @@ function createUri(id_song,id_artist,genres_string,character){
     let genres = 'seed_genres='+encodeURIComponent(genres_string)
     let lista_elementos = []
 
-    if(id_artist != ''){
+    if(id_artist !== ''){
         lista_elementos.push(artist)
     }
-    if(genres_string != ''){
+    if(genres_string !== ''){
         lista_elementos.push(genres)
     }
-    if(id_song != ''){
+    if(id_song !== ''){
         lista_elementos.push(song)
     }
    
