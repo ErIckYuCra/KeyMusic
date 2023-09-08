@@ -21,7 +21,7 @@ export function listShortArtist(dataListArtist){
         artist_list.push(
             {
                 id : element.id,
-                name: element.name
+                name: element.name,
             }
         )
     });

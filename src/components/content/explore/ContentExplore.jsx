@@ -15,6 +15,7 @@ function ContentExplore(){
 
     const [newReleaseAlbum,setNewReleaseAlbum] = useState([])
     const [songList,setSongList] = useState([])
+    const [artistList,setArtistList] = useState([])
     const token = useToken()
 
     
@@ -23,10 +24,18 @@ function ContentExplore(){
     async function data(){
         const data_song = await  getSongList("37i9dQZEVXbNG2KDcFcKOF",token)
         const data_album = await getNewReleasepAlbum(token)
-
         
-        setSongList(data_song) 
-        setNewReleaseAlbum(data_album) 
+        let number_data_song = []
+        let number_data_album = []
+
+        for (let index = 0; index < 7; index++) {
+            number_data_song.push(data_song[index])
+            number_data_album.push(data_album[index])
+        }
+        
+        
+        setSongList(number_data_song) 
+        setNewReleaseAlbum(number_data_album) 
         
     }
 
@@ -41,7 +50,7 @@ function ContentExplore(){
 
         <AlbumData album_data={newReleaseAlbum}></AlbumData>
         <MusicData music_data={songList}></MusicData>
-        <ArtistData></ArtistData>
+      
 
     </section>
 }

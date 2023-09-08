@@ -1,4 +1,8 @@
 /*Gestion del Grid*/
 #contenido-explore{
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 1.3rem;
+    gap: 1rem;
 }

@@ -21,19 +21,6 @@ a {
   color: #FFFFFF;
 }
 
-button {
-  font-family: "Alata";
-  background: none;
-  color: #FFFFFF;
-  border: none;
-}
-
-input {
-  background-color: #18181D;
-  border-radius: 5px;
-  border-color: #FFFFFF;
-  font-family: "Alata";
-  color: #FFFFFF;
-  padding: 0.3rem;
-  width: 25rem;
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
 }/*# sourceMappingURL=index.css.map */

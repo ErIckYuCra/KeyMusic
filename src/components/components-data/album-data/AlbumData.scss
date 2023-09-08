@@ -2,9 +2,8 @@
 
 #album-content-data{
     background-color: $color-contenedor;
-    margin: 1.3rem;
     border-radius: 5px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     
 
 }
@@ -14,73 +13,101 @@
     padding: 1em;
     width: 100%;
     box-sizing: border-box;
+    align-items: center;
    
    
 
 
 }
 
-#contador{
-    margin-right: 1rem;
+#contador_album{
+    margin-right: 0.1rem;
     align-self: center;
+    width: 5%;
 }
 
-#img_container{
-    width: 10%;
-
+#img_container_album{
+    width: 15%;
     overflow: hidden;
   
 }
 
-#img_container img{
+#img_container_album img{
     height: auto;
     width: 100%;
     
 
 }
 
-#link_container{
+#link_container_album{
     display: flex;
     flex-direction: column;
     margin-left: 1rem;
+    width: 60%;
     
 }
 
-#link_container h1{
-    margin-bottom: .0313rem;
-    
-}
 
-#link_container span{
+
+#link_container_album span{
     color: $color-subtitulo;
 }
 
 
-#info_container{
+#data_container_album{
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    
+    align-items: end;
+    margin-right: auto;
+    width: 27%;
+    margin-right: 0.5rem;
 }
 
-#info_container span{
+#data_container_album span{
     color: $color-subtitulo;
 }
 
-#info_container h3{
+#data_container_album h3{
     margin-bottom: .0313rem;
 }
 
 
-#logo_container{
-    width: 5%;
-    padding: 1em;
+#logo_spotify_album{
+    width: 8%;
     
+    overflow: hidden; 
+}
+
+#logo_spotify_album img{
+    height: auto;
+    width: 100%;
     
 }
 
-#logo_spotify{
+/*
+
+#option_album{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-bottom: 0.5rem;
+    align-items: end;
     
-    width: 100%;
-    height: auto;
 }
+
+#option_album_new{
+    color: $color-titulo;
+}
+
+#option_album_view{
+    color: $color-subtitulo
+}
+
+
+*/
+
+
+
+

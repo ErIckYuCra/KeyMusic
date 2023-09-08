@@ -27,20 +27,7 @@ a{
     color: $color-titulo;
 }
 
-button{
-    font-family:'Alata';
-    background: none;
-    color: $color-titulo;
-    border: none;
-}
 
-input{
-    background-color: $color-contenedor;
-    border-radius: 5px;
-    border-color: $color-titulo;
-    font-family: 'Alata';
-    color: $color-titulo;
-    padding: 0.3rem;
-    width: 25rem;
-    
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
 }
