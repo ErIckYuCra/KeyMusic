@@ -25,6 +25,24 @@ export async function getArtist(id_artist="",data_token=""){
 
 }
 
+
+export async function getAllArtist(id_artist="",data_token=""){
+
+    const artist_all = await axios.get('https://api.spotify.com/v1/artists?ids='+id_artist,data_token)
+
+
+    let lista_artists = []
+
+
+    artist_all.data.artists.forEach(element => {
+        lista_artists.push(transferArtist(element))
+    });
+
+    return lista_artists
+
+
+}
+
 export async function getTopSongsArtist(id_artist="",data_token=""){
     const top_songs = await axios.get('https://api.spotify.com/v1/artists/'+id_artist+'/top-tracks?market=ES',data_token)
     let lista_songs = []
@@ -39,8 +57,6 @@ export async function getTopSongsArtist(id_artist="",data_token=""){
 
 export async function getRelatedArtist(id_artist="",data_token=""){
     const related_artist = await axios.get('https://api.spotify.com/v1/artists/'+id_artist+'/related-artists',data_token)
-    console.log(related_artist.data)
-
 
     let lista_artists = []
 

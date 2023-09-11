@@ -2,7 +2,22 @@
 #contenido-explore{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 0.5fr 1fr;
     padding: 1.3rem;
     gap: 1rem;
+}
+#artist_explore{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+}
+
+#album_explore{
+    grid-column: 1/2;
+    grid-row: 2/-1;
+}
+
+#music_explore{
+
+    grid-column: 2/-1;
+    grid-row: 2/-1;
 }

@@ -32,7 +32,17 @@ export async function getRecommendations(id_song ='',id_artist='',genres_string=
 
     let uri = createUri(id_song,id_artist,genres_string,'&')
     const recommendations = await axios.get('https://api.spotify.com/v1/recommendations?'+uri,data_token)
-    return await recommendations.data
+
+    
+    let lista_songs = []
+
+
+    recommendations.data.tracks.forEach(element => {
+        lista_songs.push(transferSongs(element))
+    });
+    
+    return lista_songs
+
 }
 
 

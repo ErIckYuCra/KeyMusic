@@ -2,14 +2,14 @@
 
 #music-content-data{
     background-color: $color-contenedor;
-    
+    padding: 1.5em;
     border-radius: 5px;
     font-size: 0.7rem;
 }
 
 .content_card_music{
     display: flex;
-    padding: 1em;
+    padding-bottom: 0.5rem;
     width: 100%;
     box-sizing: border-box;
     align-items: center;

@@ -1,0 +1,60 @@
+@import "./../../../assets/data/colors.scss";
+
+#info-artist-content-data{
+    border-radius: 5px;
+    background-color: $color-contenedor;
+    font-size: 0.8rem;
+    padding: 1.5em;
+   
+}
+
+#info_content{
+    display: flex;
+    box-sizing: border-box;
+    
+}
+
+
+
+#info_image{
+    width: 20%;
+    overflow: hidden;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+#info_image img{
+    width: 6.5rem;
+    height: 5.8rem;
+    
+}
+
+#info_data{
+    padding-left: 1rem;
+    width: 80%;
+}
+#info_data h4{
+    padding-bottom: 0.3rem;
+}
+
+#indo_follow{
+    padding-bottom: 0.5rem;
+    color: $color-subtitulo;
+}
+#indo_follow span{
+    padding-right: 1.5rem;
+}
+
+#info_genres{
+    font-size: 0.7rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    color: $color-fondo;
+}
+
+#info_genres span{
+    padding: 0.3em;
+    background-color: $color-seleccion;
+    border-radius: 3px;
+}

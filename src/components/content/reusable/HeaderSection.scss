@@ -1,0 +1,15 @@
+@import "./../../../assets/data/colors.scss";
+.header_section{
+    width: 100%;
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_section span{
+    color: $color-titulo
+}
+
+.header_section a{
+    color: $color-subtitulo;
+}

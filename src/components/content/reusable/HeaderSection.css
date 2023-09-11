@@ -1,0 +1,14 @@
+.header_section {
+  width: 100%;
+  padding-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_section span {
+  color: #FFFFFF;
+}
+
+.header_section a {
+  color: #B2B6B9;
+}/*# sourceMappingURL=HeaderSection.css.map */

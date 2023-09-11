@@ -9,7 +9,6 @@ const body = `grant_type=client_credentials&client_id=${dataApi.clientId}&client
 export async function getToken(){
    
     const dataToken = await axios.post(dataApi.urlToken, body,dataApi.header)
-
-    return await dataToken.data
+    return dataToken.data
 }
 

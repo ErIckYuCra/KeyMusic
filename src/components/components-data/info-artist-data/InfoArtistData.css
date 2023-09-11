@@ -1,0 +1,55 @@
+#info-artist-content-data {
+  border-radius: 5px;
+  background-color: #18181D;
+  font-size: 0.8rem;
+  padding: 1.5em;
+}
+
+#info_content {
+  display: flex;
+  box-sizing: border-box;
+}
+
+#info_image {
+  width: 20%;
+  overflow: hidden;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#info_image img {
+  width: 6.5rem;
+  height: 5.8rem;
+}
+
+#info_data {
+  padding-left: 1rem;
+  width: 80%;
+}
+
+#info_data h4 {
+  padding-bottom: 0.3rem;
+}
+
+#indo_follow {
+  padding-bottom: 0.5rem;
+  color: #B2B6B9;
+}
+
+#indo_follow span {
+  padding-right: 1.5rem;
+}
+
+#info_genres {
+  font-size: 0.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  color: #0F0F11;
+}
+
+#info_genres span {
+  padding: 0.3em;
+  background-color: #296EEC;
+  border-radius: 3px;
+}/*# sourceMappingURL=InfoArtistData.css.map */
