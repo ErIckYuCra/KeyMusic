@@ -26,10 +26,10 @@ function ContentMusic() {
         let number_data_artist = []
         let number_song = []
 
-        for (let index = 0; index < 7; index++) {
+        for (let index = 0; index < 9; index++) {
             number_data_song.push(listMusicData[index])
         }
-        for (let index = 0; index < 3; index++) {
+        for (let index = 0; index < 8; index++) {
             number_data_artist.push(listArtistData[index])
         }
         number_song.push(musicData)

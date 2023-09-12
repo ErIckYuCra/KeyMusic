@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-between;
   text-align: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 #artist-content-data {
@@ -11,6 +13,7 @@
   padding: 1.5em;
   width: 100%;
   box-sizing: border-box;
+  height: 100%;
 }
 
 .container_artist_data {

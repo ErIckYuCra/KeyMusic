@@ -3,6 +3,9 @@
   border-radius: 5px;
   font-size: 0.7rem;
   padding: 1.5em;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .content_card_album {

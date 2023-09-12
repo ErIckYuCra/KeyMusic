@@ -5,6 +5,11 @@ nav {
   font-size: 1em;
 }
 
+#contenedor_nav_lateral {
+  position: sticky;
+  top: 0;
+}
+
 /*Imagen Logo*/
 #contenedor-imagen-logo {
   width: 50%;
@@ -25,7 +30,13 @@ nav {
 /*Diseño Contenedor Links*/
 .li-navbar {
   padding: 0.6em;
+  padding-right: 0;
   text-align: start;
+}
+
+.li-navbar a.active {
+  color: #296EEC;
+  border-right: 0.6em solid #296EEC;
 }
 
 .contenedor-img-navbar {
@@ -38,7 +49,7 @@ nav {
   width: 90%;
 }
 
-.contenedor-icono-navbar {
+.contenedor-img-navbar div {
   width: 10%;
   min-width: 1.9em;
 }

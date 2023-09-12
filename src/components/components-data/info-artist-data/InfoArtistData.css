@@ -3,6 +3,9 @@
   background-color: #18181D;
   font-size: 0.8rem;
   padding: 1.5em;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 #info_content {

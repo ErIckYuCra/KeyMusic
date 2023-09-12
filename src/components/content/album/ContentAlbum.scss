@@ -2,4 +2,38 @@
 
 #contenido-album{
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 0.4fr 1fr;
+    padding: 1.3rem;
+    gap: 1rem;
 }
+
+
+#album_music{
+    grid-column: 1/2;
+    grid-row: 1/-1;
+    height: 100%;
+    width: 100%;
+}
+
+#get_album{
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    height: 100%;
+    width: 100%;
+}
+
+#get_artist{
+    grid-column: 2/-1;
+    grid-row: 2/3;
+    height: 100%;
+    width: 100%;
+}
+
+#all_album{
+    grid-column: 2/-1;
+    grid-row: 3/-1;
+    height: 100%;
+    width: 100%;
+}
+

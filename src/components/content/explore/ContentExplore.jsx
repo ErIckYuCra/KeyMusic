@@ -8,10 +8,6 @@ import AlbumData from "../../components-data/album-data/AlbumData"
 import MusicData from "../../components-data/music-data/MusicData"
 import ArtistData from "../../components-data/artist-data/ArtistData"
 import { getAllArtist } from "../../../utils/getDataApi/dataGetDataArtist"
-import HeaderSection from "../reusable/HeaderSection"
-
-
-
 
 function ContentExplore() {
 
@@ -61,11 +57,6 @@ function ContentExplore() {
         <section id="music_explore">
             <MusicData music_data={songList} music_header={"Descubre Nueva Musica"} link={"*"} music_link={"Ver Mas"}></MusicData>
         </section>
-
-
-
-
-
     </section>
 }
 

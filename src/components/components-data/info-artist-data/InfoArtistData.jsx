@@ -30,7 +30,7 @@ function InfoArtistData({ one_artist_data }) {
                 <h2>{one_artist_data.name}</h2>
                 <div id="indo_follow">
                     <span>{one_artist_data.popularity}</span>
-                    <span>{get_data_cahr_followers()}</span>
+                    <span>{get_data_cahr_followers() + " seguidores"}</span>
                     <span>Ver Perfil</span>
                 </div>
                 <div id="info_genres">
