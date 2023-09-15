@@ -9,7 +9,7 @@ import cantante from "../../assets/images/cantante.png"
 import cantante_activo from "../../assets/images/cantante-seleccion.png"
 import album from "../../assets/images/album.png"
 import album_activo from "../../assets/images/album-seleccion.png"
-import genero from "../../assets/images/genero.png"
+
 
 function NavBar() {
 
@@ -37,7 +37,7 @@ function NavBar() {
                     </NavLink>
                 </li>
                 <li className="li-navbar">
-                    <NavLink className="contenedor-img-navbar" to="/music">
+                    <NavLink className="contenedor-img-navbar" to="/music/*">
                         {({ isActive }) => (
                             <>
                                 <div>
@@ -51,7 +51,7 @@ function NavBar() {
                     </NavLink>
                 </li>
                 <li className="li-navbar">
-                    <NavLink className="contenedor-img-navbar" to="/artista">
+                    <NavLink className="contenedor-img-navbar" to="/artista/*">
 
                         {({ isActive }) => (
                             <>
@@ -66,7 +66,7 @@ function NavBar() {
                     </NavLink>
                 </li>
                 <li className="li-navbar">
-                    <NavLink className="contenedor-img-navbar" to="/album">
+                    <NavLink className="contenedor-img-navbar" to="/album/*">
                         {({ isActive }) => (
                             <>
                                 <div>

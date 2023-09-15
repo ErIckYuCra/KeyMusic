@@ -1,4 +1,4 @@
-import { getFollowerChar } from "../../../utils/getFollowersChar"
+import { getFollowerChar } from "../../../utils/getFunctionUtils/getFollowersChar"
 
 import "./InfoArtistData.css"
 
@@ -31,7 +31,7 @@ function InfoArtistData({ one_artist_data }) {
                 <div id="indo_follow">
                     <span>{one_artist_data.popularity}</span>
                     <span>{get_data_cahr_followers() + " seguidores"}</span>
-                    <span>Ver Perfil</span>
+                    <span><a href={one_artist_data.url_spotify}>Ver Perfil</a></span>
                 </div>
                 <div id="info_genres">
                     {one_artist_data.genres !== undefined && (

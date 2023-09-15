@@ -1,4 +1,4 @@
-import { listShortArtist } from "./transferArtist";
+import { getShortArtist } from "./transferArtist";
 
 
 export function transferAlbum(get_album){
@@ -29,7 +29,7 @@ function return_artist(album_get){
         return null
     }
     else{
-        return listShortArtist(album_get.artists)
+        return getShortArtist(album_get.artists)
     }
 }
 
@@ -53,11 +53,9 @@ function return_date(album_get){
 
 
 function get_duration(lista){
-
     let duration = 0
     lista.forEach(element => {
         duration = element.duration_ms + duration
     });
-
     return duration
 }

@@ -1,9 +1,8 @@
-
 @import '../../assets/data/colors.scss';
 
 
 /*Contenedor-Cabecera*/
-#cabecera-buscar{
+#cabecera-buscar {
 
     display: flex;
     align-items: center;
@@ -12,32 +11,54 @@
     font-size: 0.9em;
 }
 
-/*Botones*/
-button{
-    font-family:'Alata';
-    background: none;
-    color: $color-titulo;
-    border: none;
-    font-size: 1em;
+
+
+.miCheckbox {
+    display: none;
 }
+
+
+.checkbox-label {
+    cursor: pointer;
+    font-family: 'Alata';
+    font-size: 1em;
+
+
+}
+
+.miCheckbox:checked + .checkbox-label {
+    text-decoration: underline;
+    color: $color-seleccion
+    
+    
+}
+
+
+
+
+
+
+
+
 
 
 /*Estilo li - ul*/
 
-#lista-buscar{
+#lista-buscar {
     display: flex;
     justify-content: end;
     padding: 1.5em;
+    padding-right: 0;
 }
 
-#lista-buscar li{
-    margin-left: 1.5rem;
+#lista-buscar li {
+    margin-right: 2.5rem;
 }
 
 
 /*Estilo Input*/
 
-input{
+input {
     background-color: $color-contenedor;
     border-radius: 5px;
     border-color: $color-titulo;
@@ -46,5 +67,43 @@ input{
     padding: 0.3em;
     font-size: 1em;
     width: 25em;
-    
+
+}
+
+#contenedor {
+    position: relative;
+
+}
+
+#content_search {
+
+    background-color: $color-titulo;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    padding: 1em;
+    position: absolute;
+    box-sizing: border-box;
+    width: 25.8em;
+
+}
+
+.search_result {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem;
+}
+
+.search_result span {
+    color: $color-fondo;
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.name_search {
+    width: 80%;
+}
+
+.type_search {
+    width: 20%;
 }

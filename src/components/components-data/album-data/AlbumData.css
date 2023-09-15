@@ -39,10 +39,6 @@
   width: 60%;
 }
 
-#link_container_album span {
-  color: #B2B6B9;
-}
-
 #data_container_album {
   display: flex;
   flex-direction: column;

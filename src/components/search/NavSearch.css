@@ -7,13 +7,19 @@
   font-size: 0.9em;
 }
 
-/*Botones*/
-button {
+.miCheckbox {
+  display: none;
+}
+
+.checkbox-label {
+  cursor: pointer;
   font-family: "Alata";
-  background: none;
-  color: #FFFFFF;
-  border: none;
   font-size: 1em;
+}
+
+.miCheckbox:checked + .checkbox-label {
+  text-decoration: underline;
+  color: #296EEC;
 }
 
 /*Estilo li - ul*/
@@ -21,10 +27,11 @@ button {
   display: flex;
   justify-content: end;
   padding: 1.5em;
+  padding-right: 0;
 }
 
 #lista-buscar li {
-  margin-left: 1.5rem;
+  margin-right: 2.5rem;
 }
 
 /*Estilo Input*/
@@ -37,4 +44,38 @@ input {
   padding: 0.3em;
   font-size: 1em;
   width: 25em;
+}
+
+#contenedor {
+  position: relative;
+}
+
+#content_search {
+  background-color: #FFFFFF;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 1em;
+  position: absolute;
+  box-sizing: border-box;
+  width: 25.8em;
+}
+
+.search_result {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem;
+}
+
+.search_result span {
+  color: #0F0F11;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.name_search {
+  width: 80%;
+}
+
+.type_search {
+  width: 20%;
 }/*# sourceMappingURL=NavSearch.css.map */

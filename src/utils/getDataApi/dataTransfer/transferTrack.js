@@ -1,13 +1,13 @@
 import { getShortAlbum } from "./transferAlbum"
-import { listShortArtist } from "./transferArtist"
+import { getShortArtist } from "./transferArtist"
 
 
-export function transferSongs(get_song) {
+export function transferTrack(get_song) {
     let song = {
 
         id_song: get_song.id,
         name: get_song.name,
-        artists: listShortArtist(get_song.artists),
+        artists: getShortArtist(get_song.artists),
         url_spotify: get_song.external_urls.spotify,
         preview_url: get_song.preview_url,
         album: return_album(get_song.album)

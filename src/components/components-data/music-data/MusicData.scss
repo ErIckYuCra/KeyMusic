@@ -1,6 +1,6 @@
 @import "./../../../assets/data/colors.scss";
 
-#music-content-data{
+#music-content-data {
     background-color: $color-contenedor;
     padding: 1.5em;
     border-radius: 5px;
@@ -10,7 +10,7 @@
     box-sizing: border-box;
 }
 
-.content_card_music{
+.content_card_music {
     display: flex;
     padding-bottom: 0.5rem;
     width: 100%;
@@ -19,24 +19,24 @@
 }
 
 
-#contador_music{
+#contador_music {
     margin-right: 0.1rem;
     align-self: center;
     width: 5%;
 }
 
 
-#img_container_music{
+#img_container_music {
     width: 15%;
     overflow: hidden;
 }
 
-#img_container_music img{
+#img_container_music img {
     height: auto;
     width: 100%;
 }
 
-#link_container_music{
+#link_container_music {
     display: flex;
     flex-direction: column;
     margin-left: 1rem;
@@ -45,38 +45,39 @@
 
 
 
-#link_container_music span{
+#link_container_music span {
     color: $color-subtitulo;
 }
 
 
-#logo_container_music{
+#logo_container_music {
     display: flex;
     margin-left: auto;
     width: 15%;
-    padding: 1em;
-    
+    gap: 0.2rem;
+
 }
 
-#logo_reproductor_music{
+#logo_reproductor_music {
     width: 50%;
-    padding-right: 0.5rem;
+
 }
 
-#logo_reproductor_music img{
+#logo_reproductor_music img {
     width: 100%;
     height: auto;
 
 }
 
+#logo_spotify_music {
 
-#logo_spotify_music{
     width: 50%;
+
 }
 
+#logo_spotify_music img {
 
-#logo_spotify_music img{
-    
     width: 100%;
     height: auto;
+
 }

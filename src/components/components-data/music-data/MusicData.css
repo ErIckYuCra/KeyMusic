@@ -47,12 +47,11 @@
   display: flex;
   margin-left: auto;
   width: 15%;
-  padding: 1em;
+  gap: 0.2rem;
 }
 
 #logo_reproductor_music {
   width: 50%;
-  padding-right: 0.5rem;
 }
 
 #logo_reproductor_music img {

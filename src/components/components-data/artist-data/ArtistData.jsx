@@ -1,5 +1,6 @@
-import { getFollowerChar } from '../../../utils/getFollowersChar'
-import HeaderSection from '../../content/reusable/HeaderSection'
+import { NavLink } from 'react-router-dom'
+import { getFollowerChar } from '../../../utils/getFunctionUtils/getFollowersChar'
+import HeaderSection from '../../components-element/reusable/HeaderSection.jsx'
 import './ArtistData.css'
 
 function ArtistData({ artist_data,artist_header,link,artist_link }) {
@@ -14,7 +15,7 @@ function ArtistData({ artist_data,artist_header,link,artist_link }) {
                         <img src={artist_d.images[0].url} />
                     </div>
                     <div className='container_info_artist'>
-                        <h3>{artist_d.name}</h3>
+                        <h3><NavLink to={"/artista/"+artist_d.id_artist}>{artist_d.name}</NavLink></h3>
                         <span>{getFollowerChar(artist_d.followers) + ' seguidores'}</span>
                     </div>
                 </div>

@@ -7,15 +7,10 @@ import App from '../App';
 
 function TokenContext() {
 
-
-
     const [header, setHeader] = useState(null)
-
-
 
     async function getTokenHeader() {
         const token = await getToken()
-
         setHeader(getHeader(token.access_token))
     }
 
@@ -23,9 +18,7 @@ function TokenContext() {
         if (header == null) {
             getTokenHeader()
         }
-
     }, [header])
-
 
     return <ContextToken.Provider value={header}>
         <App></App>

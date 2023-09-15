@@ -1,18 +1,23 @@
 
 import axios from 'axios'
-import { transferSongs } from './dataTransfer/transferSong'
+import { getListTransfer } from '../../getFunctionUtils/getListTransfer'
+import { transferTrack } from '../dataTransfer/transferTrack'
 
-
-export async function getSong(id_song="",data_token=""){
-    const song = await axios.get('https://api.spotify.com/v1/tracks/'+id_song,data_token)
-    return transferSongs(song.data)
+export async function getTrack(id_song="",data_token=""){
+    const track = await axios.get('https://api.spotify.com/v1/tracks/'+id_song,data_token)
+    return transferTrack(track.data)
 }
 
 
+export async function getRecommendations(id_song ='',id_artist='',genres_string='',data_token=""){
+    let uri = createUri(id_song,id_artist,genres_string,'&')
+    const recommendations = await axios.get('https://api.spotify.com/v1/recommendations?'+uri,data_token)
+    return getListTransfer(recommendations.data.tracks,transferTrack)
+
+}
 
 
-
-
+/*Funciones de Analisis de AUDIO AUN POR UTILIZAR*/
 export async function getAudioFeatures(id_song="",data_token=""){
     const audio_features = await axios.get('https://api.spotify.com/v1/audio-features/'+id_song,data_token)
     return await audio_features.data
@@ -24,26 +29,6 @@ export async function getAudioAnalysis(id_song="",data_token=""){
 }
 
 
-
-
-
-
-export async function getRecommendations(id_song ='',id_artist='',genres_string='',data_token=""){
-
-    let uri = createUri(id_song,id_artist,genres_string,'&')
-    const recommendations = await axios.get('https://api.spotify.com/v1/recommendations?'+uri,data_token)
-
-    
-    let lista_songs = []
-
-
-    recommendations.data.tracks.forEach(element => {
-        lista_songs.push(transferSongs(element))
-    });
-    
-    return lista_songs
-
-}
 
 
 function createUri(id_song,id_artist,genres_string,character){

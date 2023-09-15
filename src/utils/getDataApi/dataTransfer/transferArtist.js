@@ -14,8 +14,7 @@ export function transferArtist(get_artist){
 }
 
 
-export function listShortArtist(dataListArtist){
-    
+export function getShortArtist(dataListArtist){
     let artist_list = []    
     dataListArtist.forEach(element => {
         artist_list.push(
@@ -46,6 +45,5 @@ function getPopularity(data_popularity){
     else{
         return "Desconocido"
     }
-
 }
 
