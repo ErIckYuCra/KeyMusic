@@ -8,70 +8,95 @@ import ArtistData from '../../components-data/artist-data/ArtistData'
 import MusicData from '../../components-data/music-data/MusicData'
 import InfoArtistData from '../../components-data/info-artist-data/InfoArtistData'
 import { useParams } from 'react-router-dom'
+import HeaderSection from '../../components-element/reusable/HeaderSection'
+import "./../../../assets/css/style_content.css"
 function ContentMusic() {
 
-    const {id_music} = useParams()
+    const { id_music } = useParams()
+    const [idMusic,setIdMusic] = useState(id_music)
     const [listTrack, setListTrack] = useState([])
-    const [track, setTrack] = useState([])
-    const [artist, setArtist] = useState({})
+    const [track, setTrack] = useState()
+    const [artist, setArtist] = useState()
     const [listArtist, setListArtist] = useState([])
     const token = useToken()
 
+    function handlerSetStateID(id){
+        setIdMusic(id)
+    }
 
     async function getData(id_music) {
-        const listTrackData = await getRecommendations(id_music, "", "", token)
+   
+        const listTrackData = await getRecommendations(id_music, "", "", 9, token)
         const trackData = await getTrack(id_music, token)
         const artistData = await getArtist(trackData.artists[0].id, token)
-        const listArtistData = await getRelatedArtist(trackData.artists[0].id, token)
+        const listArtistData = await getRelatedArtist(trackData.artists[0].id,8, token)
 
-        /*Eliminar esta parte*/
-        let number_data_track = []
-        let number_data_artist = []
-        let number_track = []
 
-        for (let index = 0; index < 9; index++) {
-            number_data_track.push(listTrackData[index])
-        }
-        for (let index = 0; index < 8; index++) {
-            number_data_artist.push(listArtistData[index])
-        }
-        number_track.push(trackData)
-        /*-------------------------*/
-
-        setListTrack(number_data_track)
-        setTrack(number_track)
+        setListArtist(listArtistData)
+        setListTrack(listTrackData)
+        setTrack(trackData)
         setArtist(artistData)
-        setListArtist(number_data_artist)
-        
+
+
     }
 
     useEffect(() => {
         if (token !== null) {
             /*Modificar para que no dependa del caracter '*'*/
-            if (id_music === '*') {
+            if (idMusic === '*') {
                 getData("2v0HNNJ3mijsvzOgHq8EHO")
             }
-            else{
-                getData(id_music)
+            else {
+                getData(idMusic)
             }
         }
-    },[token])
+    }, [token,idMusic])
 
+    function render_track() {
+        if (track !== undefined) {
+            return <MusicData index={0} images={track.album.images[0].url} id={idMusic} id_album={track.album.id} album_name={track.album.name} name={track.name} url={track.url_spotify}  handlerSetStateID={handlerSetStateID}></MusicData>
+        }
+    }
+
+    function render_artist() {
+        if (artist !== undefined) {
+            return <InfoArtistData images={artist.images[0].url} name={artist.name} popularity={artist.popularity} followers={artist.followers} url={artist.url_spotify} genres={artist.genres}></InfoArtistData>
+        }
+    }
 
     return <section id="contenido-music">
         <section id="release_music">
-            <MusicData music_data={listTrack} music_header={"Canciones Similares"} link={"*"} music_link={"Opciones de Busqueda"}></MusicData>
+            <div className='content_music_css'>
+                <HeaderSection titulo={"Canciones Similares"} link={"*"} titulo_link={"Ver Mas"} ></HeaderSection >
+                {listTrack.map((track_d, track_i) => {
+                    return <MusicData key={track_i} index={track_i} images={track_d.album.images[0].url} id={track_d.id_song} id_album={track_d.album.id} album_name={track_d.album.name} name={track_d.name} url={track_d.url_spotify} handlerSetStateID={handlerSetStateID}></MusicData>
+                })}
+            </div>
         </section>
         <section id="get_music">
-            <MusicData music_data={track} music_header={"Cancion"} link={"*"} music_link={""}></MusicData>
+            <div className='content_music_css'>
+                <HeaderSection titulo={"Cancion"} link={"*"} titulo_link={""} ></HeaderSection>
+                {render_track()}
+            </div>
         </section>
         <section id="get_artist">
-            <InfoArtistData one_artist_data={artist}></InfoArtistData>
+            <div className='contetn_get_artist_css'>
+                {render_artist()}
+            </div>
+
         </section>
         <section id="release_artist">
-            <ArtistData artist_data={listArtist} artist_header={"Artistas Similares"} link={"*"} artist_link={""}></ArtistData>
+            <div className="content_artist_css">
+                <HeaderSection titulo={"Artistas Similares"} link={'*'} titulo_link={'Ver Mas'} ></HeaderSection >
+                {listArtist.map((artist_d, artist_i) => {
+                    return <ArtistData key={artist_i} images={artist_d.images[0].url}  id={artist_d.id_artist} name={artist_d.name} followers={artist_d.followers}></ArtistData>
+                })}
+
+            </div>
         </section>
     </section>
 }
 
 export default ContentMusic
+
+

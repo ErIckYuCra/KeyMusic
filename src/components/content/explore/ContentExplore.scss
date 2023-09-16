@@ -1,23 +1,43 @@
-/*Gestion del Grid*/
-#contenido-explore{
+@import "./../../../assets/data/colors.scss";
+
+
+#contenido-explore {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.5fr 1fr;
     padding: 1.3rem;
     gap: 1rem;
 }
-#artist_explore{
+
+#artist_explore {
     grid-column: 1/-1;
     grid-row: 1/2;
+
+    width: 100%;
+
+    height: 100%;
+
+    
 }
 
-#album_explore{
+#album_explore {
     grid-column: 1/2;
     grid-row: 2/-1;
+    height: 100%;
+    width: 100%;
+
+
 }
 
-#music_explore{
+
+
+
+#music_explore {
 
     grid-column: 2/-1;
     grid-row: 2/-1;
+
+    height: 100%;
+    width: 100%;
+
 }

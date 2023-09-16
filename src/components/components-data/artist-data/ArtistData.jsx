@@ -3,29 +3,28 @@ import { getFollowerChar } from '../../../utils/getFunctionUtils/getFollowersCha
 import HeaderSection from '../../components-element/reusable/HeaderSection.jsx'
 import './ArtistData.css'
 
-function ArtistData({ artist_data,artist_header,link,artist_link }) {
+function ArtistData({images,id,name,followers,handlerSetStateID}) {
 
-    return <section id='artist-content-data'>
+    function validateHandler(){
+        if(handlerSetStateID !== undefined){
+            handlerSetStateID(id)
+        }
+        console.log(id)
+    }
 
-        <HeaderSection titulo = {artist_header} link = {link} titulo_link = {artist_link} ></HeaderSection >
-        <section id="artist-contentainer">
-            {artist_data.map((artist_d, index_artist) => {
-                return <div key={index_artist} className='container_artist_data'>
-                    <div className='container_img_artist'>
-                        <img src={artist_d.images[0].url} />
-                    </div>
-                    <div className='container_info_artist'>
-                        <h3><NavLink to={"/artista/"+artist_d.id_artist}>{artist_d.name}</NavLink></h3>
-                        <span>{getFollowerChar(artist_d.followers) + ' seguidores'}</span>
-                    </div>
-                </div>
-            })}
-        </section>
-    </section>
+    return <div className='container_artist_data'>
+        <div className='container_img_artist'>
+            <img src={images} />
+        </div>
+        <div className='container_info_artist'>
+            <h3><NavLink to={"/artista/" + id} onClick={validateHandler}>{name}</NavLink></h3>
+            <span>{getFollowerChar(followers) + ' seguidores'}</span>
+        </div>
+    </div>
+
 
 
 }
 
 export default ArtistData
 
-    

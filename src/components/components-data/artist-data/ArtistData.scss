@@ -1,14 +1,5 @@
 @import "./../../../assets/data/colors.scss";
 
-#artist-contentainer{
-    
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-
-}
 
 #artist-content-data{
     background-color: $color-contenedor;

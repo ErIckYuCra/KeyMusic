@@ -6,12 +6,12 @@ import { transferSearch } from '../dataTransfer/transferSearch'
 
 
 
-export async function getDataSearch(search="",type_search="",data_token=""){
+export async function getDataSearch(search="",type_search="",limit=10,data_token=""){
     
     let searchs = encodeURIComponent(search)
 
 
-    const get_search = await axios.get('https://api.spotify.com/v1/search?q='+searchs+'&type='+type_search,data_token)
+    const get_search = await axios.get('https://api.spotify.com/v1/search?q='+searchs+'&type='+type_search+"&limit="+limit,data_token)
 
 
     /*Modularizar esta parte*/

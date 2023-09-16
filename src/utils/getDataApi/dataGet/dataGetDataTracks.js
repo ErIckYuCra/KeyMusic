@@ -9,9 +9,9 @@ export async function getTrack(id_song="",data_token=""){
 }
 
 
-export async function getRecommendations(id_song ='',id_artist='',genres_string='',data_token=""){
+export async function getRecommendations(id_song ='',id_artist='',genres_string='',limit=10,data_token=""){
     let uri = createUri(id_song,id_artist,genres_string,'&')
-    const recommendations = await axios.get('https://api.spotify.com/v1/recommendations?'+uri,data_token)
+    const recommendations = await axios.get('https://api.spotify.com/v1/recommendations?'+uri+"&limit="+limit,data_token)
     return getListTransfer(recommendations.data.tracks,transferTrack)
 
 }

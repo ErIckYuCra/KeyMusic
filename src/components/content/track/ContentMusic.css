@@ -1,4 +1,3 @@
-/*Gestion del Grid*/
 #contenido-music {
   display: grid;
   grid-template-columns: 1fr 1fr;

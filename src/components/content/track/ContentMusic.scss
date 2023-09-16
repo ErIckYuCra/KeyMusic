@@ -1,4 +1,5 @@
-/*Gestion del Grid*/
+@import "./../../../assets/data/colors.scss";
+
 #contenido-music{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -14,6 +15,10 @@
     grid-row: 1/-1;
     height: 100%;
     width: 100%;
+
+    
+
+
 }
 
 #get_music{
@@ -21,6 +26,8 @@
     grid-row: 1/2;
     height: 100%;
     width: 100%;
+
+    
 }
 
 #get_artist{
@@ -28,6 +35,9 @@
     grid-row: 2/3;
     height: 100%;
     width: 100%;
+
+    
+
 }
 
 #release_artist{
@@ -35,5 +45,6 @@
     grid-row: 3/-1;
     height: 100%;
     width: 100%;
+
 }
 

@@ -10,7 +10,7 @@ function NavSearch() {
     const [listSearch, setListSearch] = useState([])
 
     async function getData(querySearch, typeSearch) {
-        const dataSearch = await getDataSearch(querySearch, typeSearch, token)
+        const dataSearch = await getDataSearch(querySearch, typeSearch,10, token)
         setListSearch(dataSearch)
     }
 
